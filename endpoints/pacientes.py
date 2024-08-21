@@ -1,4 +1,4 @@
-from fastapi import APIRouter
+from fastapi import APIRouter, Body
 from schemas.registros import Paciente
 from config.db import dynamodb as db
 from functions.pacientes import *
@@ -6,7 +6,7 @@ from functions.pacientes import *
 endpointPacientes = APIRouter()
 
 @endpointPacientes.get("/pacientes")
-def getPacientes(numero : int = 15):
+def getPacientes(numero : int = 100):
 
     response = obtenerUsuarios(db, numero)
 
@@ -15,13 +15,15 @@ def getPacientes(numero : int = 15):
 @endpointPacientes.post("/pacientes")
 def aregarPacientes(paciente:Paciente):
 
+    print(paciente)
+
     response = agregarUsuario(db,paciente)
 
     return response
 
-@endpointPacientes.get("/paciente/byID")
+@endpointPacientes.get("/paciente/{documento}")
 def getPaciente(documento : str):
-
+    print(documento)
     response = obtenerUsuarioID(db, documento)
 
     return response
@@ -34,7 +36,7 @@ def actualizarPacientes(paciente:Paciente):
      
     return response
 
-@endpointPacientes.delete("/pacientes")
+@endpointPacientes.delete("/pacientes/{documento}")
 def eliminarPaciente(documento:str):
 
     response = eliminarUsuario(db, documento)

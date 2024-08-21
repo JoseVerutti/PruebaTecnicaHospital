@@ -11,6 +11,6 @@ class Paciente(BaseModel):
     bloque : str
     especialidad : str
     proceso : str
-    tiempo : time
+    tiempo : int
 
 

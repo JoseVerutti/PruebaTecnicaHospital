@@ -3,6 +3,11 @@
 Este documento describe los endpoints disponibles en la API de gestión de pacientes.
 
 ## Endpoints
+![Imagen de la api](Readme1.png)
+
+## Schemas
+
+![Esquemas](Readme2.png)
 
 ### 1. Obtener Pacientes
 
