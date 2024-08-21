@@ -3,11 +3,60 @@
 Este documento describe los endpoints disponibles en la API de gestión de pacientes.
 
 ## Endpoints
-![Imagen de la api](Readme1.png)
+
+Imagen de la api
 
 ## Schemas
 
-![Esquemas](Readme2.png)
+Esquemas
+
+## Instalación y Ejecución
+
+Para instalar y ejecutar la API de gestión de pacientes, sigue estos pasos:
+
+### Requisitos previos
+
+- Python 3.7 o superior
+- pip (gestor de paquetes de Python)
+
+### Instalación
+
+1. Clona el repositorio de la API en tu máquina local.
+2. Navega hasta el directorio del proyecto en tu terminal.
+3. Crea un entorno virtual de Python para aislar las dependencias del proyecto:
+   ```bash
+   python -m venv venv
+   ```
+4. Activa el entorno virtual:
+   - En Windows:
+     ```bash
+     venv\Scripts\activate
+     ```
+   - En macOS o Linux:
+     ```bash
+     source venv/bin/activate
+     ```
+5. Instala las dependencias del proyecto utilizando el archivo `requirements.txt`:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+### Ejecución
+
+1. Asegúrate de tener el entorno virtual activado.
+2. Ejecuta la API utilizando uvicorn:
+   ```bash
+   uvicorn main:app --reload
+   ```
+   - `main` es el nombre del archivo Python que contiene la inicialización de la API (en este caso, `main.py`).
+   - `app` es el objeto de la aplicación FastAPI.
+   - `--reload` reinicia automáticamente el servidor cuando se realizan cambios en el código.
+
+3. La API estará disponible en `http://localhost:8000`.
+
+4. Puedes acceder a la documentación interactiva de Swagger en `http://localhost:8000/docs`.
+
+Ahora puedes comenzar a utilizar la API de gestión de pacientes.
 
 ### 1. Obtener Pacientes
 
