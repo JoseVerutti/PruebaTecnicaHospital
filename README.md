@@ -17,6 +17,7 @@ Para instalar y ejecutar la API de gestión de pacientes, sigue estos pasos:
 
 - Python 3.7 o superior
 - pip (gestor de paquetes de Python)
+- Agregar el archivo .env que posee las llaves para poder conectarse a la base de datos.
 
 ### Instalación
 
